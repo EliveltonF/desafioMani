@@ -1,14 +1,14 @@
-import react from 'react';
-import MusicList from '../music/musicList';
-import AppAlbum from '../app-album';
+import AppHome from '../App-home';
+import MusicList from '../music/musicList'
 import {Main} from '../design/style-Main';
 
 export default () => {
     return (
         <Main>
-            <AppAlbum/>
             <MusicList/>
-            <MusicList/>
+            <AppHome title="Albums"/>
+    
+        
         </Main>
     )
 }

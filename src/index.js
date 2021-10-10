@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Main from './Main/main'
+import Rotas from './services/rotas';
+import { Provider } from 'react-redux';
+import store from './store-redux/store';
+
 
 ReactDOM.render(
-
-  <Main />
-
-  ,
-
+  <Provider store={store}>
+    <Rotas />
+  </Provider>,
   document.getElementById('root')
 );
 

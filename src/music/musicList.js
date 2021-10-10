@@ -1,33 +1,27 @@
 import React, { useEffect, useState } from 'react';
-import App from '../App-home.js'
+
+import { useDispatch } from 'react-redux';
+import { addMusic } from '../store-redux/store';
 import api from "../services/api";
-import AppAlbum from '../app-album.js';
 
-export default function MusicList() {
-
+export default ()=> {
+    const dispatch = useDispatch()
     const [music, setMusic] = useState([]);
 
     useEffect(() => {
-        api.get('genre').then((res) => {
-            setMusic(res.data);
-            
-        });
+           const Load = async () => {
+            await api.get('search?q=jesse_aguiar').then((data) => {
+                setMusic(data.data)
+              });
+           }
         
+        Load();
         //eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
-   
-   function valor() {
-    for (const [key,value] of Object.entries(music)) {
-        console.log(key)
-        vale.splice(0,1,value)
-      }
-   }
-   let vale = [];
-   
-   valor();
-
+    dispatch(addMusic(music.data));
     return (
-            <AppAlbum/>,
-            <App valores={vale}></App>
+        <div></div>
     )
+ 
+
 }

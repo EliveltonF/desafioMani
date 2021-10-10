@@ -3,19 +3,20 @@ import styled from 'styled-components';
 export const Lista = styled.div`
     margin-top: 25px;
     display:flex;
-    width: 6000px;
+    width: 5100px;
     background-color: #141616;
     margin-left: 50px;
     padding-bottom: 100px;
     &:hover {
-        margin-left: -3860px;
-        transition: all 10s;
-    }
+            transition: all 25s;
+            margin-left: -3900px;
+        }
 
     div {
        
         display: flex;
         align-items: center;
+        
     }
     img {
         border-radius:10px;
@@ -40,17 +41,6 @@ export const Lista = styled.div`
         margin-top: -20px;
         margin-left: 5px;
     }
-    button {
-        font-size:50px;
-        margin-left: 50px;
-        margin-top: 0px;
-        position: absolute;
-        width:70px;
-        height:70px;
-        border-radius:50%;
-        background-color: #999999;
-        border: none;
-    }
-       
+  
 `;
 
