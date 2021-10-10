@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL:  "https://desafio-mani.vercel.app/",
+    baseURL:  "httpgi://localhost:3000/",
 });
 
 export default api;
